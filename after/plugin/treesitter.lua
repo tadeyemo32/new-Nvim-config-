@@ -1,16 +1,43 @@
 require('nvim-treesitter.configs').setup({
-  -- A list of parser names, or "all"
-  ensure_installed = {"c", "cpp", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+  -- List of parsers to install (excluding json)
+  ensure_installed = {
+    "bash",
+    "c",
+    "cpp",
+    "c_sharp",
+    "css",
+    "dockerfile",
+    "go",
+    "haskell",
+    "html",
+    "java",
+    "javascript",
+    "jsdoc",
+    "jsonc",         -- optional: JSON with comments, safer than plain json
+    "kotlin",
+    "latex",
+    "lua",
+    "markdown",
+    "markdown_inline",
+    "python",
+    "ruby",
+    "rust",
+    "sql",
+    "swift",
+    "toml",
+    "typescript",
+    "tsx",
+    "vim",
+    "vimdoc",
+    "yaml",
+  },
 
-  -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
-
-  -- Automatically install missing parsers when entering buffer
-  auto_install = true,
+  sync_install = false,    -- Install parsers asynchronously
+  auto_install = true,     -- Auto-install missing parsers when entering buffer
 
   highlight = {
     enable = true,
-    -- Add more highlight options here if needed
-  }
+    additional_vim_regex_highlighting = false,
+  },
 })
 
