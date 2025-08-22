@@ -7,6 +7,14 @@ return require('packer').startup(function(use)
   -- Theme
   use 'Mofiqul/dracula.nvim'
 
+ use {  -- Add Gruvbox here
+        "ellisonleao/gruvbox.nvim",
+        config = function()
+            require("gruvbox").setup({
+                contrast = "hard",
+            })
+        end
+    }
     -- Telescope Fuzzy Finder
   use {
     'nvim-telescope/telescope.nvim',
